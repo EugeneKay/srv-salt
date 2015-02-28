@@ -1,0 +1,17 @@
+{#
+# states/system/cron/files/salt-minion.cron
+# EugeneKay/salt
+-#}
+# vim: ft=crontab
+# /etc/cron.d/salt-minion
+# {{hostname}}
+#
+# Note: this file is managed by Salt. Any changes you make WILL be overwritten!
+#
+# Restart salt-minion to reconnect to master
+#
+
+# Min   Hour    Day     Month   Day     User    Command
+# 0-59  0-23    1-31    1-12    0-6     root    /bin/false
+10      12      *       *       *       root    /usr/bin/systemctl restart salt-minion
+
