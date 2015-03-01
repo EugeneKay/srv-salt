@@ -43,6 +43,15 @@ nagios-check-bandwidth:
     - user: root
     - group: root
 
+nagios-check-folder:
+  file.managed:
+    - name: /usr/lib64/nagios/plugins/check_folder
+    - source:
+      - salt://system/nrpe/files/check_folder.sh
+    - mode: 755
+    - user: root
+    - group: root
+
 nagios-check-mem:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_mem
