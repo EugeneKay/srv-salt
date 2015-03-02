@@ -9,7 +9,11 @@
 roles:
   - basic
 
+## Hardware info
+hardware:
+  - virtual
+
 ## System settings
-system:
-  sshd:
-    auth: "keys"
+sshd:
+  auth: "keys"
+

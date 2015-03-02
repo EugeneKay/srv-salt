@@ -69,3 +69,31 @@ nagios-check-transfer:
     - mode: 755
     - user: root
     - group: root
+
+{%  if "lvm" in pillar['hardware'] %}
+nagios-check-volgroup:
+  file.managed:
+    - name: /usr/lib64/nagios/plugins/check_volgroup
+    - source: salt://system/nrpe/files/check_volgroup.sh
+    - mode: 755
+    - user: root
+    - group: root
+{%  endif %}
+{%  if "raid" in pillar['hardware'] %}
+nagios-check-mdadm:
+  file.managed:
+    - name: /usr/lib64/nagios/plugins/check_mdadm
+    - source: salt://system/nrpe/files/check_mdadm.sh
+    - mode: 755
+    - user: root
+    - group: root
+{%  endif %}
+{%  if "ups" in pillar['hardware'] %}
+nagios-check-apcupsd:
+  file.managed:
+    - name: /usr/lib64/nagios/plugins/check_apcupsd
+    - source: salt://system/nrpe/files/check_apcupsd.sh
+    - mode: 755
+    - user: root
+    - group: root
+{%  endif %}
