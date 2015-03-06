@@ -23,6 +23,7 @@ AWK=$(which awk)
 folder="${1}"
 warn="${2}"
 crit="${3}"
+exclude="${4}"
 
 # Default to zero
 if [ -z "${warn}" ]
@@ -39,14 +40,14 @@ then
 fi
 
 # Get number of bytes used
-dubytes=$(${DU} -sb ${folder})
+dubytes=$(${DU} -sb ${folder} --exclude=${exclude})
 dureturn="$?"
 
 # Extract byte count
 bytes="$(echo ${dubytes} | cut -d ' ' -f1)"
 
 # Get a human size
-size=$(echo ${bytes} | ${AWK} 'function human(x) {s="bkMGTEPYZ";while (x>=1000 && length(s)>1){x/=1024; s=substr(s,2)}return int(x+0.5) substr(s,1,1)}{gsub(/^[0-9]+/, human($1)); print}')
+size=$(echo ${bytes} | ${AWK} 'function human(x) {s="bkMGTEPYZ";while (x>=1000 && length(s)>1){x/=1024; s=substr(s,2)}return int(x*100)/100 substr(s,1,1)}{gsub(/^[0-9]+/, human($1)); print}')
 
 # Figure out status
 if [ "${dureturn}" -ne "0" ]
