@@ -12,9 +12,11 @@ nrpe:
       - nrpe
       - nagios-common
       - nagios-plugins
+      - nagios-plugins-disk
       - nagios-plugins-load
       - nagios-plugins-ping
       - nagios-plugins-users
+      - nagios-plugins-uptime
       - nagios-plugins-check-updates
   service:
     - running
