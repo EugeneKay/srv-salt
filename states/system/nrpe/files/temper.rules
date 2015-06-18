@@ -1,0 +1,14 @@
+{#
+# states/system/nrpe/files/temper.rules
+# EugeneKay/salt
+-#}
+#
+# /etc/udev/rules.d/temper.rules
+# {{hostname}}
+#
+# WARNING: This file is managed by Salt. Any changes you make WILL be erased!
+#
+# Rule to allow all users to read TEMPer sensor
+#
+
+SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7401", MODE="666"

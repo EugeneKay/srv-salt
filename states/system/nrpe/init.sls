@@ -102,6 +102,27 @@ nagios-check-mdadm:
     - user: root
     - group: root
 {%  endif %}
+{%  if "temper" in pillar['hardware'] %}
+nagios-check-temper:
+  file.managed:
+    - name: /usr/lib64/nagios/plugins/check_temper
+    - source: salt://system/nrpe/files/check_temper.sh
+    - mode: 755
+    - user: root
+    - group: root
+  pip.installed:
+    - name: temperusb
+nagios-udev-thermometer:
+  file.managed:
+    - name: /etc/udev/rules.d/temper.rules
+    - source: salt://system/nrpe/files/temper.rules
+    - mode: 755
+    - user: root
+    - group: root
+    - template: jinja
+    - defaults:
+        hostname: {{grains['localhost']}}
+{%  endif %}
 {%  if "ups" in pillar['hardware'] %}
 nagios-check-apcupsd:
   file.managed:
