@@ -17,6 +17,7 @@
 # Adjust as needed
 DU=$(which du)
 AWK=$(which awk)
+SUDO=$(which sudo)
 
 ## Variables
 # Arguments
@@ -40,7 +41,7 @@ then
 fi
 
 # Get number of bytes used
-dubytes=$(${DU} -sb ${folder} --exclude=${exclude})
+dubytes=$(${SUDO} ${DU} -sb ${folder} --exclude=${exclude})
 dureturn="$?"
 
 # Extract byte count

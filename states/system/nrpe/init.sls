@@ -34,6 +34,18 @@ nrpe:
     - template: jinja
     - defaults:
         hostname: {{grains['localhost']}}
+## Sudoers config
+sudoers-nrpe:
+  file.managed:
+    - name: /etc/sudoers.d/nrpe
+    - source: salt://system/nrpe/files/sudoers.conf
+    - mode: 640
+    - user: root
+    - group: root
+    - requires: nrpe.pkg
+    - template: jinja
+    - defaults:
+        hostname: {{grains['localhost']}}
 
 ## Custom Plugins
 nagios-check-bandwidth:
