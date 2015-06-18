@@ -9,4 +9,5 @@ hardware:
   - physical
   - lvm
   - raid
+  - temper
   - ups

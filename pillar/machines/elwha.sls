@@ -6,5 +6,8 @@
 
 ## Hardware properties
 hardware:
+  - lvm
   - physical
+  - raid
+  - temper
   - ups
