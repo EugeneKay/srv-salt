@@ -110,4 +110,10 @@ nagios-check-apcupsd:
     - mode: 755
     - user: root
     - group: root
+apcupsd:
+  pkg.installed:
+    - name: apcupsd
+  service:
+    - running
+    - enable: True
 {%  endif %}

@@ -211,13 +211,13 @@ loadpct)
 timeleft)
 	if [ "$CRITVAL" != "" ]; then
 		if [ $ROUNDED -lt $CRITVAL ]; then
-			echo "CRITICAL - Time Left: $VALUE Minutes"
+			echo "CRITICAL - Time Left: $VALUE Minutes | UPS=$VALUE;$CRITVAL;$WARNVAL"
 			exit 2
 		fi
 	fi
 	if [ "$WARNVAL" != "" ]; then
 		if [ $ROUNDED -lt $WARNVAL ]; then
-			echo "WARNING - Time Left: $VALUE Minutes"
+			echo "WARNING - Time Left: $VALUE Minutes | UPS=$VALUE;$CRITVAL;$WARNVAL"
 			exit 1
 		fi
 	fi
