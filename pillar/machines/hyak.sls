@@ -1,13 +1,11 @@
 #
-# pillar/machines/elwha.sls
+# pillar/machines/hyak.sls
 # EugeneKay/salt
 #
 
 
 ## Hardware properties
 hardware:
-  - lvm
   - physical
-  - raid
   - temper
   - ups
