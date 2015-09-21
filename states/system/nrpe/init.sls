@@ -66,6 +66,14 @@ nagios-check-folder:
     - user: root
     - group: root
 
+nagios-check-io:
+  file.managed:
+    - name: /usr/lib64/nagios/plugins/check_io
+    - source: salt://system/nrpe/files/check_io.sh
+    - mode: 755
+    - user: root
+    - group: root
+
 nagios-check-mem:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_mem
