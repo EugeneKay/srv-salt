@@ -17,4 +17,4 @@ base:
 {% if "dnetc" in roles %}
     - services.dnetc
 {%  endif %}
-    - packages.python33
+    - packages.python34

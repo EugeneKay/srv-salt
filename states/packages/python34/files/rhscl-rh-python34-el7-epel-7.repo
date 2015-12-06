@@ -1,0 +1,8 @@
+[rhscl-rh-python34-el7]
+name=Copr repo for rh-python34-el7 owned by rhscl
+baseurl=https://copr-be.cloud.fedoraproject.org/results/rhscl/rh-python34-el7/epel-7-$basearch/
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/rhscl/rh-python34-el7/pubkey.gpg
+enabled=1
+enabled_metadata=1
