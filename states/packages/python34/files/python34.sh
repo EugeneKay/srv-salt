@@ -15,6 +15,6 @@ then
         export PATH+=":/opt/rh/rh-python34/root/usr/bin"
         export LD_LIBRARY_PATH+=":/opt/rh/rh-python34/root/usr/lib64"
         export MANPATH+=":/opt/rh/rh-python34/root/usr/share/man"
-        export XDG_DATA_DIRS+="/opt/rh/rh-python34/root/usr/share"
+        export XDG_DATA_DIRS+=":/opt/rh/rh-python34/root/usr/share"
         export PYTHON34_PATHSET=0
 fi
