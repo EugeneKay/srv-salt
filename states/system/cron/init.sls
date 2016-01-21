@@ -14,5 +14,6 @@ cron-jobs-salt-minion:
     - mode: 644
     - user: root
     - group: root
+    - template: jinja
     - defaults:
         hostname: {{grains['localhost']}}
