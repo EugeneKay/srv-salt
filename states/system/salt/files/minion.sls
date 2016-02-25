@@ -18,7 +18,7 @@ default_include: minion.d/*.conf
 ## Master info
 master: salt.kashpureff.org
 master_port: 4506
-
+ipv6: True
 
 ## Wait between resolution attempts
 retry_dns: 30
