@@ -34,10 +34,7 @@ then
 	device=$(df --output=source "${device}" | tail -n1)
 fi
 
-# Follow any symlinks
-device=$(readlink -e "${device}")
-
-# Handle direct-kernel boot virt
+# Handle root device
 if [ "${device}" == "/dev/root" ]
 then
 	if [ -b "/dev/sda" ]
@@ -47,6 +44,10 @@ then
 	then
 		device="/dev/xvda"
 	fi
+else
+	# Follow any symlinks
+	device=$(readlink -e "${device}")
+
 fi
 
 # Verify device
