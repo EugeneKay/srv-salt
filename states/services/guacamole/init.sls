@@ -9,6 +9,7 @@ guacamole:
   pkg.installed:
     - pkgs:
       - guacamole
+      - guacamole-noauth
       - guacd
       - libguac
       - libguac-client-rdp
