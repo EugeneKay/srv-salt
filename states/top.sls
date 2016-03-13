@@ -17,6 +17,9 @@ base:
 {%  if "dnetc" in roles %}
     - services.dnetc
 {%  endif %}
+{%  if "guacamole" in roles %}
+    - services.guacamole
+{%  endif %}
 {%  if "subsonic" in roles %}
     - services.subsonic
 {%  endif %}
