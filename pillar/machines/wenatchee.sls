@@ -11,3 +11,8 @@ hardware:
   - raid
   - temper
   - ups
+
+## Roles
+roles:
+  - subsonic
+  - tomcat
