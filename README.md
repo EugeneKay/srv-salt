@@ -5,7 +5,7 @@
 Salt
 ----
 
-This is a collection of [SaltStack](https://docs.saltstack.com/) State files and PIllar tree used by EugeneKay's systems. They are likely not of much use to the general public, except as an example of setting up your own Salt repository.
+This is a collection of [SaltStack](https://docs.saltstack.com/) State files and PIllar tree used by EugeneKay's systems. They may be useful as a reference for managing your own Salt-based infrastructure.
 
 
 License
