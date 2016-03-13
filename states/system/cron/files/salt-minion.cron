@@ -4,7 +4,6 @@
 -#}
 # vim: ft=crontab
 # /etc/cron.d/salt-minion
-# {{hostname}}
 #
 # Note: this file is managed by Salt. Any changes you make WILL be overwritten!
 #

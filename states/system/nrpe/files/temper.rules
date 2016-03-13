@@ -4,7 +4,6 @@
 -#}
 #
 # /etc/udev/rules.d/temper.rules
-# {{hostname}}
 #
 # WARNING: This file is managed by Salt. Any changes you make WILL be erased!
 #

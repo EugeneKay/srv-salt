@@ -4,7 +4,6 @@
 -#}
 # vim: ft=yaml
 # /etc/salt/minion
-# {{hostname}}
 #
 # Salt Minion config file
 #

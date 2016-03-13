@@ -2,7 +2,7 @@
 # states/packages/python34/init.sls
 # EugeneKay/Salt
 #
-# Install Python3.3
+# Python 3.4 support
 #
 
 ## Repo

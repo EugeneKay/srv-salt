@@ -1,8 +1,8 @@
 #
-# states/services/subsonic/initsls
+# states/services/subsonic/init.sls
 # EugeneKay/Salt
 #
-# State for Subsonic
+# Subsonic Server
 #
 
 # Package

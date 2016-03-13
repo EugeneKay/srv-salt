@@ -26,5 +26,4 @@ salt-minion:
     - group:  wheel
     - template: jinja
     - defaults:
-        hostname: {{grains['localhost']}}
         id: {{grains['id']}}

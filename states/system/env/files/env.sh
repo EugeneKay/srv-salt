@@ -1,3 +1,7 @@
+{#
+# states/system/env/files/env.sh
+# EugeneKay/Salt
+-#}
 #
 # /etc/profile.d/0_env.sh
 #

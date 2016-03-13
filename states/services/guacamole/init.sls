@@ -2,7 +2,7 @@
 # states/services/guacamole/init.sls
 # EugeneKay/Salt
 #
-# State for Gacamole
+# Guacamole server
 #
 
 guacamole:
@@ -27,5 +27,3 @@ guacamole:
     - group: tomcat
     - mode: 640
     - template: jinja
-    - defaults:
-        hostname: {{grains['localhost']}}

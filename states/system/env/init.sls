@@ -14,3 +14,4 @@ env_hax:
     - mode: 664
     - user: root
     - group: wheel
+    - template: jinja

@@ -16,4 +16,3 @@ cron-jobs-salt-minion:
     - group: root
     - template: jinja
     - defaults:
-        hostname: {{grains['localhost']}}

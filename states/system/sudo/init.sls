@@ -15,5 +15,3 @@ sudoers:
     - user: root
     - group: root
     - template: jinja
-    - defaults:
-        hostname: {{grains['localhost']}}

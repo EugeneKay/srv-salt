@@ -1,5 +1,5 @@
 {#
-# states/packages/python34/files/nrpe.cfg
+# states/packages/python34/files/python34.sh
 # EugeneKay/salt
 -#}
 #

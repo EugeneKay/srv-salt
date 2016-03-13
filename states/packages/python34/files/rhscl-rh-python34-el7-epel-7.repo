@@ -1,3 +1,15 @@
+{#
+# states/packages/python34/files/rhscl-rh-python34-el7-epel-7.repo
+# EugeneKay/salt
+-#}
+#
+# /etc/yum.repos.d/rhscl-python34.repo
+#
+# WARNING: This file is managed by Salt. Any changes you make WILL be erased!
+#
+# Python 3.4 repo definition
+#
+
 [rhscl-rh-python34-el7]
 name=Copr repo for rh-python34-el7 owned by rhscl
 baseurl=https://copr-be.cloud.fedoraproject.org/results/rhscl/rh-python34-el7/epel-7-$basearch/

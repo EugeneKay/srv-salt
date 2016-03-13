@@ -2,10 +2,9 @@
 # states/services/tomcat/init.sls
 # EugeneKay/Salt
 #
-# State for Tomcat
+# Tomcat Server
 #
 
-## Tomcat Servr
 tomcat:
   pkg:
     - installed

@@ -32,8 +32,7 @@ nrpe:
     - group: root
     - requires: nrpe.pkg
     - template: jinja
-    - defaults:
-        hostname: {{grains['localhost']}}
+
 ## Sudoers config
 sudoers-nrpe:
   file.managed:
@@ -44,8 +43,6 @@ sudoers-nrpe:
     - group: root
     - requires: nrpe.pkg
     - template: jinja
-    - defaults:
-        hostname: {{grains['localhost']}}
 
 ## Custom Plugins
 nagios-check-bandwidth:
@@ -128,8 +125,7 @@ nagios-udev-thermometer:
     - user: root
     - group: root
     - template: jinja
-    - defaults:
-        hostname: {{grains['localhost']}}
+
 {%  endif %}
 {%  if "ups" in pillar['hardware'] %}
 nagios-check-apcupsd:

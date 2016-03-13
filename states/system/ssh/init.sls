@@ -25,5 +25,4 @@ sshd:
     - group: wheel
     - template: jinja
     - defaults:
-        hostname: {{grains['localhost']}} 
         auth: keys
