@@ -14,6 +14,7 @@ python34-repo:
     - user: root
     - group: root
     - mode: 644
+    - template: jinja
 
 python34-python:
   pkg.installed:
