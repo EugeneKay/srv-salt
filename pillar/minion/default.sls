@@ -7,7 +7,7 @@
 
 ## Roles
 roles:
-  - basic
+  - none
 
 ## Hardware info
 hardware:

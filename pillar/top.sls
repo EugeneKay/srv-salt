@@ -5,7 +5,10 @@
 # Pillar database start
 #
 
+{%  set id=grains['id'] %}
+
 base:
   "*":
-    - machines/default
-    - machines/{{grains['id']}}
+    - minion/default
+    - minion/{{ id }}
+    - ignore_missing: True
