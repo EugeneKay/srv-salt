@@ -2,7 +2,7 @@
 # states/top.sls
 # EugeneKay/salt
 #
-# Highstate file
+# Highstate definition
 #
 
 {%  set roles = pillar['roles'] %}
@@ -28,6 +28,7 @@ base:
 {%  if "tomcat" in roles %}
     - services.tomcat
 {%  endif %}
-
-
+{%  if "znc" in roles %}
+    - services.znc
+{%  endif %}
     - packages.python34
