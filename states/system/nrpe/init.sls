@@ -33,6 +33,27 @@ nrpe:
     - requires: nrpe.pkg
     - template: jinja
 
+## Firewall rules
+nrpe-iptables:
+  iptables.append:
+    - family: ipv4
+    - table: filter
+    - chain: INPUT
+    - proto: tcp
+    - dport: 5666
+    - source: 173.230.156.35,198.19.0.1
+    - jump: ACCEPT
+nrpe-ip6tables:
+  iptables.append:
+    - family: ipv6
+    - table: filter
+    - chain: INPUT
+    - proto: tcp
+    - dport: 5666
+    - source: 2600:3c01::14:7001,2600:3c01:e001:2900::1
+    - jump: ACCEPT
+
+
 ## Sudoers config
 sudoers-nrpe:
   file.managed:

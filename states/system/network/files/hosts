@@ -1,0 +1,12 @@
+{#
+# states/system/network/files/hosts
+# EugeneKay/salt
+-#}
+#
+# /etc/hosts
+#
+# WARNING: This file is managed by Salt. Any changes you make WILL be erased!
+#
+
+127.0.0.1   {{id}} {{hostname}} localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         {{id}} {{hostname}} localhost localhost.localdomain localhost6 localhost6.localdomain6

@@ -9,6 +9,8 @@
 base:
   '*':
     - system.cron
+    - system.firewall
+    - system.network
     - system.nrpe
     - system.ntp
     - system.salt

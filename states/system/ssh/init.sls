@@ -26,3 +26,21 @@ sshd:
     - template: jinja
     - defaults:
         auth: keys
+# Firewall rules
+ssh-iptables:
+  iptables.append:
+    - family: ipv4
+    - table: filter
+    - chain: INPUT
+    - proto: tcp
+    - dport: 22
+    - jump: ACCEPT
+ssh-ip6tables:
+  iptables.append:
+    - family: ipv6
+    - table: filter
+    - chain: INPUT
+    - proto: tcp
+    - dport: 22
+    - jump: ACCEPT
+
