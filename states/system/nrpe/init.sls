@@ -30,7 +30,7 @@ nrpe:
     - mode: 644
     - user: root
     - group: root
-    - requires: nrpe.pkg
+    - makedirs: True
     - template: jinja
 
 ## Firewall rules
