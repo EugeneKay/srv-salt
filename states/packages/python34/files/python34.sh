@@ -10,11 +10,19 @@
 # Python3.4 environment setup
 #
 
-if [ -z "${PYTHON34_PATHSET}" ]
+if [[ ! "${PATH}" == *rh-python34* ]]
 then
-        export PATH+=":/opt/rh/rh-python34/root/usr/bin"
-        export LD_LIBRARY_PATH+=":/opt/rh/rh-python34/root/usr/lib64"
-        export MANPATH+=":/opt/rh/rh-python34/root/usr/share/man"
-        export XDG_DATA_DIRS+=":/opt/rh/rh-python34/root/usr/share"
-        export PYTHON34_PATHSET=0
+	export PATH+=":/opt/rh/rh-python34/root/usr/bin"
+fi
+if [[ ! "${LD_LIBRARY_PATH}" == *rh-python34* ]]
+then
+	export LD_LIBRARY_PATH+=":/opt/rh/rh-python34/root/usr/lib64"
+fi
+if [[ ! "${MANPATH}" == *rh-python34* ]]
+then
+	export MANPATH+=":/opt/rh/rh-python34/root/usr/share/man"
+fi
+if [[ ! "${XDF_DATA_DIRS}" == *rh-python34* ]]
+then
+	export XDG_DATA_DIRS+=":/opt/rh/rh-python34/root/usr/share"
 fi
