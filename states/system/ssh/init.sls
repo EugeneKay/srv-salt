@@ -24,8 +24,6 @@ sshd:
     - user: root
     - group: wheel
     - template: jinja
-    - defaults:
-        auth: keys
 # Firewall rules
 ssh-iptables:
   iptables.append:

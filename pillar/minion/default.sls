@@ -12,8 +12,3 @@ roles:
 ## Hardware info
 hardware:
   - virtual
-
-## System settings
-sshd:
-  auth: "keys"
-
