@@ -31,4 +31,3 @@ base:
 {%  if "znc" in roles %}
     - services.znc
 {%  endif %}
-    - packages.python34
