@@ -14,5 +14,5 @@ hardware:
 
 ## Roles
 roles:
-  - subsonic
+  - libresonic
   - tomcat

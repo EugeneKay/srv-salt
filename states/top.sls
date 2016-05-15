@@ -22,8 +22,8 @@ base:
 {%  if "guacamole" in roles %}
     - services.guacamole
 {%  endif %}
-{%  if "subsonic" in roles %}
-    - services.subsonic
+{%  if "libresonic" in roles %}
+    - services.libresonic
 {%  endif %}
 {%  if "tomcat" in roles %}
     - services.tomcat
