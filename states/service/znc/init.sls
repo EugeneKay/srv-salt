@@ -4,29 +4,26 @@
 #
 # ZNC IRC Bouncer
 #
-{%  set roles = pillar['roles'] %}
 
-# Daemon
+## State options
+{%  set roles = pillar['roles'] %}
+{%  set pki = pillar['certs'][pillar['znc']['cert']] %}
+
+
+## Daemon
 znc:
   pkg.installed:
     - name: znc
+  file.symlink:
+    - name: /var/lib/znc/.znc
+    - target: /srv/znc
   service.running:
     - enable: true
     - watch:
       - file: znc-config
-      - cmd: znc-cert
-  file.symlink:
-    - name: /var/lib/znc/.znc
-    - target: /srv/znc
+      - file: znc-pki
 
-
-znc-data:
-  file.directory:
-    - name: /srv/znc
-    - user: znc
-    - group: znc
-    - mode: 775
-
+# Configuration
 znc-config:
   file.managed:
     - name: /srv/znc/configs/znc.conf
@@ -39,18 +36,30 @@ znc-config:
     - template: jinja
     - context:
         hostname: {{grains['fqdn']}}
+
+# PKI
 znc-pki:
-  file.directory:
-    - name: /etc/pki/znc
+  file.managed:
+    - name: /etc/pki/znc/znc.pem
+    - makedirs: True
     - user: root
     - group: znc
-    - mode: 750
-znc-cert:
-  cmd.run:
-    - unless: test -s /etc/pki/znc/znc.pem
-    - name: openssl req -x509 -nodes -days 3650 -newkey rsa:4096 -keyout /etc/pki/tls/private/znc.key -out /etc/pki/tls/certs/znc.crt -subj '/C=US/ST=WA/L=Seattle/O=Kashpureff Family/OU=Network Infrastructure/CN={{ grains['fqdn'] }}/emailAddress=systems@kashpureff.org'; cat /etc/pki/tls/certs/znc.crt /etc/pki/tls/private/znc.key > /etc/pki/znc/znc.pem
-    - require:
-      - file: znc-pki
+    - mode: 640
+    - source: salt://certs/stacked.pem
+    - template: jinja
+    - context:
+        key: {{pki['key']}}
+        cert: {{pki['cert']}}
+        chain: {{pki['chain']}}
+
+
+## Data storage
+znc-data:
+  file.directory:
+    - name: /srv/znc
+    - user: znc
+    - group: znc
+    - mode: 775
 
 
 ## Firewall rules
