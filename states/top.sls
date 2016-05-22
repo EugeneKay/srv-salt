@@ -9,7 +9,9 @@
 base:
   '*':
     - system.cron
+{%  if "firewall" in roles %}
     - system.firewall
+{%  endif %}
     - system.network
     - system.nrpe
     - system.ntp

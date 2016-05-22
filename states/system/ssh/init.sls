@@ -2,6 +2,7 @@
 # states/system/ssh/init.sls
 # EugeneKay/salt
 #
+{%  set roles = pillar['roles'] %}
 
 ## SSH Daemon
 # Package
@@ -25,6 +26,7 @@ sshd:
     - group: wheel
     - template: jinja
 # Firewall rules
+{%  if "firewall" in roles %}
 ssh-iptables:
   iptables.append:
     - family: ipv4
@@ -41,4 +43,4 @@ ssh-ip6tables:
     - proto: tcp
     - dport: 22
     - jump: ACCEPT
-
+{%  endif %}

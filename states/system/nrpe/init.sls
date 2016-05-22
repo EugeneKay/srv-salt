@@ -4,6 +4,7 @@
 #
 # Install & configure nrpe
 #
+{%  set roles = pillar['roles'] %}
 
 ## Base Daemon
 nrpe:
@@ -34,6 +35,7 @@ nrpe:
     - template: jinja
 
 ## Firewall rules
+{%  if "firewall" in roles %}
 nrpe-iptables:
   iptables.append:
     - family: ipv4
@@ -52,6 +54,7 @@ nrpe-ip6tables:
     - dport: 5666
     - source: 2600:3c01::14:7001,2600:3c01:e001:2900::1
     - jump: ACCEPT
+{%  endif %}
 
 
 ## Sudoers config

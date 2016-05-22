@@ -4,6 +4,7 @@
 #
 # ZNC IRC Bouncer
 #
+{%  set roles = pillar['roles'] %}
 
 # Daemon
 znc:
@@ -53,6 +54,7 @@ znc-cert:
 
 
 ## Firewall rules
+{%  if "firewall" in roles %}
 znc-iptables:
   iptables.append:
     - family: ipv4
@@ -85,4 +87,5 @@ znc-ip6tables-ssl:
     - proto: tcp
     - dport: 6697
     - jump: ACCEPT
+{%  endif %}
 
