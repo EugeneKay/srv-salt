@@ -9,27 +9,29 @@
 base:
   '*':
     - system.cron
-{%  if "firewall" in roles %}
-    - system.firewall
-{%  endif %}
     - system.network
     - system.nrpe
     - system.ntp
     - system.salt
     - system.ssh
     - system.sudo
+{%  if "acme" in roles %}
+    - service.acme
 {%  if "dnetc" in roles %}
-    - services.dnetc
+    - service.dnetc
+{%  endif %}
+{%  if "firewall" in roles %}
+    - service.firewall
 {%  endif %}
 {%  if "guacamole" in roles %}
-    - services.guacamole
+    - service.guacamole
 {%  endif %}
 {%  if "libresonic" in roles %}
-    - services.libresonic
+    - service.libresonic
 {%  endif %}
 {%  if "tomcat" in roles %}
-    - services.tomcat
+    - service.tomcat
 {%  endif %}
 {%  if "znc" in roles %}
-    - services.znc
+    - service.znc
 {%  endif %}

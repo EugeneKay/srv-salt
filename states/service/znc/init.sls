@@ -1,5 +1,5 @@
 #
-# states/services/znc/init.sls
+# states/service/znc/init.sls
 # EugeneKay/Salt
 #
 # ZNC IRC Bouncer
@@ -30,7 +30,7 @@ znc-data:
 znc-config:
   file.managed:
     - name: /srv/znc/configs/znc.conf
-    - source: salt://services/znc/files/znc.conf
+    - source: salt://service/znc/files/znc.conf
     - user: znc
     - group: znc
     - mode: 600

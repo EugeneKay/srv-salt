@@ -1,5 +1,5 @@
 #
-# states/services/libresonic/init.sls
+# states/service/libresonic/init.sls
 # EugeneKay/Salt
 #
 # Subsonic Server

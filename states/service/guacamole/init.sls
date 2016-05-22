@@ -1,5 +1,5 @@
 #
-# states/services/guacamole/init.sls
+# states/service/guacamole/init.sls
 # EugeneKay/Salt
 #
 # Guacamole server
@@ -22,7 +22,7 @@ guacamole:
     - enable: true
   file.managed:
     - name: /etc/guacamole/guacamole.properties
-    - source: salt://services/guacamole/files/guacamole.properties
+    - source: salt://service/guacamole/files/guacamole.properties
     - user: root
     - group: tomcat
     - mode: 640
