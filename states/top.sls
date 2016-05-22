@@ -17,6 +17,7 @@ base:
     - system.sudo
 {%  if "acme" in roles %}
     - service.acme
+{%  endif %}
 {%  if "dnetc" in roles %}
     - service.dnetc
 {%  endif %}

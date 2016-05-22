@@ -7,17 +7,8 @@
 
 ## NTP Daemon
 ntpd:
-# Package
   pkg.installed:
     - name: ntp
-# Service
-  service:
-    - name: ntpd
-    - running
-    - enable: True
-    - watch:
-      - file: ntpd
-# ntpd_config
   file.managed:
     - name: /etc/ntp.conf
     - source:
@@ -28,3 +19,6 @@ ntpd:
     - template: jinja
     - defaults:
         servers: ["0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org", "3.pool.ntp.org"]
+  service:
+    - running
+    - enable: True

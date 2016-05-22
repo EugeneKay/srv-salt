@@ -19,11 +19,6 @@ nrpe:
       - nagios-plugins-users
       - nagios-plugins-uptime
       - nagios-plugins-check-updates
-  service:
-    - running
-    - enable: True
-    - watch:
-      - file: nrpe
   file.managed:
     - name: /etc/nagios/nrpe.cfg
     - source:
@@ -33,6 +28,10 @@ nrpe:
     - group: root
     - makedirs: True
     - template: jinja
+  service:
+    - running
+    - enable: True
+
 
 ## Firewall rules
 {%  if "firewall" in roles %}
