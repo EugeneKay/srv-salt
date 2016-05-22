@@ -23,6 +23,7 @@ roles:
   - tomcat
   - znc
 
+
 ## Hardware info
 #
 # Set properties which match the hardware of a minion. Some combinations are
@@ -36,7 +37,22 @@ hardware:
   - ups
   - virtual
 
+
 ## System settings
 #
 system:
   - none
+
+## PKI
+#
+# Certificates, Keys, and related secrets.
+include:
+  - pki.znc-itvends-com
+
+
+## ZNC
+#
+# Settings for the ZNC service. The certificate must be in
+#
+znc:
+  certificate: www-example-com
