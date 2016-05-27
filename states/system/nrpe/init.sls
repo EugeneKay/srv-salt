@@ -28,8 +28,7 @@ nrpe:
     - group: root
     - makedirs: True
     - template: jinja
-  service:
-    - running
+  service.running:
     - enable: True
 
 
