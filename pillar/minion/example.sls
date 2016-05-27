@@ -45,9 +45,9 @@ system:
 
 ## PKI
 #
-# Certificates, Keys, and related secrets.
+# Certificates, Keys, and related secrets to make available for service states.
 include:
-  - pki.znc-itvends-com
+  - pki.www-example-com
 
 
 ## ZNC
