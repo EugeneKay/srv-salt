@@ -6,4 +6,5 @@
 ## Roles
 roles:
   - guacamole
+  - salt
   - tomcat

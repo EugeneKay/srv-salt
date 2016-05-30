@@ -5,9 +5,11 @@
 # Ignore templates sourced from https://github.com/github/gitignore/
 #
 
-## Sensitive Pillar data
+## Sensitive data
 pillar/pki/
 pillar/minion/
+pki/
+
 
 ## Global/NotepadPP.gitignore
 # Notepad++ backups #

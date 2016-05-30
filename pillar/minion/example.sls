@@ -20,6 +20,7 @@ roles:
   - master
   - plex
   - rtorrent
+  - salt
   - serve
   - subsonic
   - tomcat
