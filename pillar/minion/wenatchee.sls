@@ -15,4 +15,5 @@ hardware:
 ## Roles
 roles:
   - libresonic
+  - plex
   - tomcat

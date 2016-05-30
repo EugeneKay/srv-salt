@@ -18,6 +18,7 @@ roles:
   - dnetc
   - guacamole
   - master
+  - plex
   - serve
   - subsonic
   - tomcat
