@@ -1,6 +1,6 @@
 #
 # states/service/tomcat/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Tomcat Server
 #

@@ -1,6 +1,6 @@
 #
 # states/system/salt/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Salt Minion daemon
 

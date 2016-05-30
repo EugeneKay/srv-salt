@@ -1,6 +1,6 @@
 #
 # states/top.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Highstate definition
 #

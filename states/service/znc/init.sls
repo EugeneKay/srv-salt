@@ -1,6 +1,6 @@
 #
 # states/service/znc/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # ZNC IRC Bouncer
 #

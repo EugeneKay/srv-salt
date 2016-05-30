@@ -1,6 +1,6 @@
 #
 # states/service/libresonic/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Subsonic Server
 #

@@ -1,6 +1,6 @@
 #
 # states/service/guacamole/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Guacamole server
 #

@@ -1,6 +1,6 @@
 {#
 # states/system/nrpe/files/temper.rules
-# EugeneKay/salt
+# EugeneKay/srv-salt
 -#}
 #
 # /etc/udev/rules.d/temper.rules

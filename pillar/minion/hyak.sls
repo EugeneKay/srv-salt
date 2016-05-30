@@ -1,6 +1,6 @@
 #
 # pillar/machines/hyak.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 
 

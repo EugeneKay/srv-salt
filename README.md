@@ -1,6 +1,6 @@
 <!--
 # README.md
-# EugeneKay/salt
+# EugeneKay/srv-salt
 -->
 Salt
 ----

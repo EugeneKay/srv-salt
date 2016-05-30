@@ -1,6 +1,6 @@
 #
 # states/service/plex/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Plex Media Server
 #

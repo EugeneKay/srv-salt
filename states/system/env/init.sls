@@ -1,6 +1,6 @@
 #
 # states/system/env/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Environment variable hax
 #

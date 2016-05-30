@@ -1,6 +1,6 @@
 
 # states/service/firewall/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Firewalling
 #

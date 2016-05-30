@@ -1,6 +1,6 @@
 #
 # pillar/machines/example.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Example machine data
 #

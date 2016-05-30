@@ -1,6 +1,6 @@
 #
 # states/system/sudo/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # System sudo
 #

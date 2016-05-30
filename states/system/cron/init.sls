@@ -1,6 +1,6 @@
 #
 # states/system/cron/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 
 # State for cron jobs
 #

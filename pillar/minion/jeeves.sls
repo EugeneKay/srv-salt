@@ -1,6 +1,6 @@
 #
 # pillar/machines/jeeves.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 
 ## Roles

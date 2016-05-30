@@ -1,6 +1,6 @@
 #
 # states/system/ssh/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 {%  set roles = pillar['roles'] %}
 

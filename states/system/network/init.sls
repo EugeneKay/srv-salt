@@ -1,6 +1,6 @@
 #
 # states/system/network/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Networking
 #

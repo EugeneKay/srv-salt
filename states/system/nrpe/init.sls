@@ -1,6 +1,6 @@
 #
 # states/system/nrpe/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Install & configure nrpe
 #

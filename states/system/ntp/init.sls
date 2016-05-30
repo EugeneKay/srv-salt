@@ -1,6 +1,6 @@
 #
 # states/system/ntp/init.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Time server
 #

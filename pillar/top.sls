@@ -1,6 +1,6 @@
 #
 # pillar/top.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 # Pillar database start
 #

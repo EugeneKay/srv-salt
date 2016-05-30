@@ -1,6 +1,6 @@
 {#
 # states/system/salt/files/minion.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 -#}
 # vim: ft=yaml
 # /etc/salt/minion

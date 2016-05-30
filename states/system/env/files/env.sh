@@ -1,6 +1,6 @@
 {#
 # states/system/env/files/env.sh
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 -#}
 #
 # /etc/profile.d/0_env.sh

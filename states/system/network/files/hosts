@@ -1,6 +1,6 @@
 {#
 # states/system/network/files/hosts
-# EugeneKay/salt
+# EugeneKay/srv-salt
 -#}
 #
 # /etc/hosts

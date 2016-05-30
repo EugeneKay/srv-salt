@@ -1,6 +1,6 @@
 #
 # pillar/machines/default.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # Default machine data
 #

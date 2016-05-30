@@ -1,6 +1,6 @@
 #
 # states/service/rtorrent/init.sls
-# EugeneKay/Salt
+# EugeneKay/srv-salt
 #
 # rtorrent
 #

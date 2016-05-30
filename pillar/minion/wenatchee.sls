@@ -1,6 +1,6 @@
 #
 # pillar/machines/wenatchee.sls
-# EugeneKay/salt
+# EugeneKay/srv-salt
 #
 
 
