@@ -1,0 +1,39 @@
+{#
+# states/service/rtorrent/files/rtorrent.rc
+# EugeneKay/srv-salt
+-#}
+#
+# /etc/rtorrent.rc
+#
+# WARNING: This file is managed by Salt. Any changes you make WILL be erased!
+#
+# rtorrent daemon configuration
+
+directory = {{directory}}
+session = ~/sessions/
+
+peer_exchange = no
+tracker_numwant = -1
+use_udp_trackers = yes
+port_range = {{port_range}}
+dht_port = {{dht_port}}
+dht = auto
+bind = {{bind}}
+
+min_peers = 2
+max_peers = 30
+min_peers_seed = 2
+max_peers_seed = 60
+
+download_rate = 1024
+upload_rate = 5120
+
+check_hash = yes
+system.file_allocate.set = yes
+encryption = allow_incoming,enable_retry
+
+scgi_local = /srv/rtorrent/scgi.socket
+
+system.umask.set = 002
+
+execute = {sh,-c,/usr/bin/php /srv/html/rtorrent/php/initplugins.php &}

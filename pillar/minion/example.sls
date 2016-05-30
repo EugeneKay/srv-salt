@@ -19,6 +19,7 @@ roles:
   - guacamole
   - master
   - plex
+  - rtorrent
   - serve
   - subsonic
   - tomcat
@@ -47,13 +48,25 @@ system:
 ## PKI
 #
 # Certificates, Keys, and related secrets to make available for service states.
+#
 include:
   - pki.www-example-com
 
 
+## rtorrent
+#
+# Settings for the rtorrent daemon.
+#
+rtorrent:
+  directory: /srv/rtorrent
+  port_range: 6881-6889
+  dht_port: 6881
+  bind: 0.0.0.0
+
+
 ## ZNC
 #
-# Settings for the ZNC service. The certificate must be in
+# Settings for the ZNC service. The certificate must be included under the pki/ pillar.
 #
 znc:
   certificate: www-example-com

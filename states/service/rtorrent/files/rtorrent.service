@@ -1,0 +1,15 @@
+[Unit]
+Description=rtorrent daemon
+After=network.target
+
+[Service]
+ExecStart=-/usr/bin/screen -dmS rtorrent rtorrent
+Type=forking
+RemainAfterExit=no
+User=rtorrent
+Group=rtorrent
+Restart=always
+WorkingDirectory=/srv/rtorrent
+
+[Install]
+WantedBy=multi-user.target
