@@ -8,13 +8,17 @@
 {%  set roles = pillar['roles'] %}
 base:
   '*':
+## Global
     - system.cron
     - system.network
     - system.nrpe
     - system.ntp
+    - system.packages
     - system.salt
     - system.ssh
     - system.sudo
+
+## Role-Based
 {%  if "acme" in roles %}
     - service.acme
 {%  endif %}
@@ -29,6 +33,15 @@ base:
 {%  endif %}
 {%  if "libresonic" in roles %}
     - service.libresonic
+{%  endif %}
+{%  if "plex" in roles %}
+    - service.plex
+{%  endif %}
+{%  if "rtorrent" in roles %}
+    - service.rtorrent
+{%  endif %}
+{%  if "salt" in roles %}
+    - service.salt
 {%  endif %}
 {%  if "tomcat" in roles %}
     - service.tomcat
