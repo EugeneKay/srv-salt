@@ -6,4 +6,7 @@
 #
 
 packages:
-  pkg.uptodate
+#  pkg.uptodate
+  cmd.run:
+    - name: yum update -y
+    - unless: yum check-update
