@@ -15,7 +15,7 @@ default_include: minion.d/*.conf
 #include: /etc/salt/minion-local.conf
 
 ## Master info
-master: salt.kashpureff.org
+master: {{master}}
 master_port: 4506
 ipv6: True
 

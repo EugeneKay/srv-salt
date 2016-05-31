@@ -9,6 +9,6 @@
 
 base:
   "*":
-    - minion/default
+    - defaults
     - minion/{{ id }}
     - ignore_missing: True

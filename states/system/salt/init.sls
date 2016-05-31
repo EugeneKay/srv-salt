@@ -27,3 +27,4 @@ salt-minion:
     - template: jinja
     - defaults:
         id: {{grains['id']}}
+        master: {{pillar['system']['master']}}
