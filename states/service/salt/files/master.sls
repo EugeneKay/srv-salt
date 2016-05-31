@@ -34,7 +34,7 @@ minion_data_cache: True
 
 ## Output
 state_verbose: True
-state_output: mixed
+state_output: changes
 
 
 ## Data
