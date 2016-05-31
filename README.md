@@ -18,9 +18,9 @@ Bootstrapping
 -------------
 
  1. Clone this repository into /srv/salt/.
- 2. Customize `pillar/defaults.sls` to suit your environment, in particular the _master_ hostname.
- 2. Create `pillar/minion/<minion>.sls`. Include `master` in the `roles` list.
- 3. Install the salt-minion package. Set `id: <minion>` in `/etc/salt/minion`
- 4. Perform a state run: `salt-call --file-root=/srv/salt/states/ --pillar-root=/srv/salt/pillar/ --local state.apply`
- 5. Accept the master's minion key: `salt-key -a <minion> -y`
+ 2. Customize `pillar/defaults.sls` to suit your environment.
+ 2. Copy `pillar/minion/example-master.sls` to `pillar/minion/<hostname>.sls` and customize as desired.
+ 3. Install the salt-minion package. Set `id: <hostname>` in the minion config(_/etc/salt/minion_).
+ 4. Perform a state run: `$ salt-call --file-root=/srv/salt/states/ --pillar-root=/srv/salt/pillar/ --local state.apply`
+ 5. Accept the master's minion key: `$ salt-key -a <hostname> -y`
  6. Enjoy!
