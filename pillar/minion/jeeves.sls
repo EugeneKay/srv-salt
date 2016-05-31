@@ -8,3 +8,7 @@ roles:
   - guacamole
   - salt
   - tomcat
+
+## System settings
+system:
+  master: localhost

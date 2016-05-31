@@ -8,8 +8,12 @@
 
 ## Roles
 roles:
-  - none
+  - None
 
+
+## Hardware
+hardware:
+  - None
 
 ## System Settings
 system:

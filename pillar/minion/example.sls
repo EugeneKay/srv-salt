@@ -34,11 +34,9 @@ roles:
 #
 hardware:
   - lvm
-  - physical
   - raid
   - temper
   - ups
-  - virtual
 
 
 ## System settings

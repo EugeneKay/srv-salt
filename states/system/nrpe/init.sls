@@ -5,6 +5,8 @@
 # Install & configure nrpe
 #
 {%  set roles = pillar['roles'] %}
+{%  set hardware = pillar['hardware'] %}
+
 
 ## Base Daemon
 nrpe:
@@ -111,7 +113,7 @@ nagios-check-transfer:
     - user: root
     - group: root
 
-{%  if "lvm" in pillar['hardware'] %}
+{%  if "lvm" in hardware %}
 nagios-check-volgroup:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_volgroup
@@ -120,7 +122,7 @@ nagios-check-volgroup:
     - user: root
     - group: root
 {%  endif %}
-{%  if "raid" in pillar['hardware'] %}
+{%  if "raid" in hardware %}
 nagios-check-mdadm:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_mdadm
@@ -129,7 +131,7 @@ nagios-check-mdadm:
     - user: root
     - group: root
 {%  endif %}
-{%  if "temper" in pillar['hardware'] %}
+{%  if "temper" in hardware %}
 nagios-check-temper:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_temper
@@ -149,7 +151,7 @@ nagios-udev-thermometer:
     - template: jinja
 
 {%  endif %}
-{%  if "ups" in pillar['hardware'] %}
+{%  if "ups" in hardware %}
 nagios-check-apcupsd:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_apcupsd
