@@ -5,7 +5,7 @@
 Salt
 ----
 
-This is a collection of [SaltStack](https://docs.saltstack.com/) State files and PIllar tree used by EugeneKay's systems. They may be useful as a reference for managing your own Salt-based infrastructure.
+This is a collection of [SaltStack](https://docs.saltstack.com/) States to manage your infrastructure.
 
 
 License
@@ -18,7 +18,9 @@ Bootstrapping
 -------------
 
  1. Clone this repository into /srv/salt/.
+ 2. Customize `pillar/defaults.sls` to suit your environment, in particular the _master_ hostname.
  2. Create `pillar/minion/<minion>.sls`. Include `master` in the `roles` list.
  3. Install the salt-minion package. Set `id: <minion>` in `/etc/salt/minion`
- 4. `sudo salt-call --file-root=/srv/salt/states/ --pillar-root=/srv/salt/pillar/ --local state.apply`
- 5. Enjoy!
+ 4. Perform a state run: `salt-call --file-root=/srv/salt/states/ --pillar-root=/srv/salt/pillar/ --local state.apply`
+ 5. Accept the master's minion key: `salt-key -a <minion> -y`
+ 6. Enjoy!
