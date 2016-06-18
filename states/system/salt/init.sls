@@ -28,3 +28,4 @@ salt-minion:
     - defaults:
         id: {{grains['id']}}
         master: {{pillar['system']['master']}}
+        hardware: {{pillar['hardware']}}

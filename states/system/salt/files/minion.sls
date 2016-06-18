@@ -43,3 +43,14 @@ color: true
 acceptance_wait_time: 10
 loop_interval: 60
 dns_check: True
+
+## Grains
+grains:
+  hardware:
+{%-  for item in hardware %}
+    - {{ item }}
+{%-  endfor %}
+
+## Mine
+mine_functions:
+  test.ping: []

@@ -10,7 +10,7 @@
 
 
 ## Daemon
-user: salt
+user: root
 pidfile: /var/run/salt-master.pid
 root_dir: /
 pki_dir: /srv/salt/pki

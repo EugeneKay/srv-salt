@@ -8,6 +8,11 @@ roles:
   - guacamole
   - salt
   - tomcat
+  - nagios
+
+## Nagios
+include:
+  - roles.nagios
 
 ## System settings
 system:

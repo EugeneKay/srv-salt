@@ -36,18 +36,18 @@ salt-pki:
     - user: salt
     - group: salt
     - mode: 770
-salt-sock:
-  file.directory:
-    - name: /var/run/salt/master
-    - user: salt
-    - group: salt
-    - mode: 750
-salt-cache:
-  file.directory:
-    - name: /var/cache/salt/master
-    - user: salt
-    - group: salt
-    - mode: 750
+#salt-sock:
+#  file.directory:
+#    - name: /var/run/salt/master
+#    - user: salt
+#    - group: salt
+#    - mode: 750
+#salt-cache:
+#  file.directory:
+#    - name: /var/cache/salt/master
+#    - user: salt
+#    - group: salt
+#    - mode: 750
 
 # Daemon
 salt-daemon:
