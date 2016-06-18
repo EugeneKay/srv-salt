@@ -31,10 +31,9 @@ rtorrent-config:
     - mode: 640
     - template: jinja
     - context:
-        directory: {{rtorrent['directory']}}
-        port_range: {{rtorrent['port_range']}}
-        dht_port: {{rtorrent['dht_port']}}
-        bind: {{rtorrent['bind']}}
+{%  for key in rtorrent %}
+        {{key}}: {{rtorrent[key]}}
+{%  endfor %}
 rtorrent-rc:
   file.symlink:
     - name: /srv/rtorrent/.rtorrent.rc

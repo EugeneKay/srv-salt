@@ -28,4 +28,6 @@ rtorrent:
   port_range: 6881-6881
   dht_port: 6881
   bind: 198.19.16.20
+  upload_rate: 10240
+  download_rate: 2560
 
