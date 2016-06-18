@@ -1,11 +1,14 @@
 #
-# pillar/machines/example.sls
+# pillar/example.sls
 # EugeneKay/srv-salt
 #
-# Example machine data
+# Example Pillar data
 #
 # This file shows most supported options, and is useful for copy-pasting. Some
 # options are not logically compatible with each other, but should be valid.
+#
+# You should assemble this data however works best for you. See the example
+# pillar entries given under minion/ for some ideas.
 #
 
 
@@ -41,18 +44,23 @@ hardware:
 
 ## System settings
 #
+# System knobs.
 system:
-  master: salt.kashpureff.org
+  master: salt.example.com
   authentication:
     method: domain
-    domain: kashpureff.org
+    domain: example.com
     otp: Ch4ngeMe
-    pdc: tokitae
+# Prestage in Domain using: $ adcli preset-computer --login-user=Administrator --prompt-password --domain=example.com --os-name="CentOS" --os-version="7" --one-time-password Ch4ngeMe
+    pdc: dc1
     dcs:
-      - tokitae
-      - oliver
+      - dc1
+      - dc2
+      - dc3
     groups:
       - domain admins
+      - domain users
+#      - domain guests
 
 ## PKI
 #
@@ -75,7 +83,8 @@ rtorrent:
 
 ## ZNC
 #
-# Settings for the ZNC service. The certificate must be included under the pki/ pillar.
+# Settings for the ZNC service. The named certificate data must be included in
+# the "PKI" section'.
 #
 znc:
   certificate: www-example-com
