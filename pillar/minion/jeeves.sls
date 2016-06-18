@@ -12,3 +12,5 @@ roles:
 ## System settings
 system:
   master: localhost
+  authentication:
+    method: domain

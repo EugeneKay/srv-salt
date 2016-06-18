@@ -9,6 +9,7 @@
 base:
   '*':
 ## Global
+    - system.authentication
     - system.cron
     - system.network
     - system.nrpe

@@ -42,7 +42,16 @@ hardware:
 ## System settings
 #
 system:
-  - none
+  master: salt.kashpureff.org
+  authentication:
+    method: domain
+    domain: kashpureff.org
+    pdc: tokitae
+    dcs:
+      - tokitae
+      - oliver
+    groups:
+      - domain admins
 
 ## PKI
 #

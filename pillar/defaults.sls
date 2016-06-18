@@ -18,3 +18,12 @@ hardware:
 ## System Settings
 system:
   master: salt.kashpureff.org
+  authentication:
+    method: local
+    domain: kashpureff.org
+    pdc: tokitae
+    dcs:
+      - tokitae
+      - oliver
+    groups:
+      - domain admins
