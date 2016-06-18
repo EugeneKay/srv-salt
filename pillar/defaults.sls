@@ -19,7 +19,7 @@ hardware:
 system:
   master: salt.kashpureff.org
   authentication:
-    method: local
+    method: domain
     domain: kashpureff.org
     pdc: tokitae
     dcs:
@@ -27,3 +27,4 @@ system:
       - oliver
     groups:
       - domain admins
+    otp: Ch4ngeMe
