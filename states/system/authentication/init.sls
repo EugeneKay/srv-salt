@@ -26,7 +26,7 @@ auth_realm:
   cmd.run:
     - onlyif:
       - "[ -z $(realm list | grep {{ domain }} ) ]"
-    - name: realm join --one-time-password={{ auth['otp] }} {{ domain }}
+    - name: realm join --one-time-password={{ auth['otp'] }} {{ domain }}
 
 ## User lookup
 auth_sssd:
