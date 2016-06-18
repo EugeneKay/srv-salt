@@ -8,13 +8,13 @@
 ## State data
 {%  set auth = pillar['system']['authentication'] %}
 {%  set domain = auth['domain'] %}
-{%  set otp = "Dongs" %}
 
 {%  if auth['method'] == "domain" %}
 ## Requirements
 auth_packages:
   pkg.installed:
     - names:
+      - adcli
       - realmd
       - sssd
       - oddjob
@@ -26,9 +26,7 @@ auth_realm:
   cmd.run:
     - onlyif:
       - "[ -z $(realm list | grep {{ domain }} ) ]"
-    - name: |
-        realm join --one-time-password={{otp}} {{ domain }}
-        realm permit --realm {{ domain }} --groups "domain admins"
+    - name: realm join --one-time-password={{ auth['otp] }} {{ domain }}
 
 ## User lookup
 auth_sssd:

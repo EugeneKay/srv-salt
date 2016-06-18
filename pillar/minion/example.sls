@@ -46,6 +46,7 @@ system:
   authentication:
     method: domain
     domain: kashpureff.org
+    otp: Ch4ngeMe
     pdc: tokitae
     dcs:
       - tokitae
