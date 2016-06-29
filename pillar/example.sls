@@ -51,7 +51,7 @@ system:
     method: domain
     domain: example.com
     otp: Ch4ngeMe
-# Prestage in Domain using: $ adcli preset-computer --login-user=Administrator --prompt-password --domain=example.com --os-name="CentOS" --os-version="7" --one-time-password Ch4ngeMe
+# Prestage in Domain using: $ adcli preset-computer --login-user=Administrator --prompt-password --domain=example.com --os-name="CentOS" --os-version="7" --one-time-password Ch4ngeMe <NetBIOS name>
     pdc: dc1
     dcs:
       - dc1
