@@ -23,10 +23,16 @@ auth_packages:
 
 ## Domain Join
 auth_realm:
+  file.managed:
+    - name: /etc/krb5.passwd
+    - contents: {{ auth['otp'] }}
+    - user: root
+    - group: root
+    - mode: 600
   cmd.run:
-    - onlyif:
-      - "[ -z $(realm list | grep {{ domain }} ) ]"
-    - name: realm join --one-time-password={{ auth['otp'] }} {{ domain }}
+    - unless:
+      - "test -f /etc/krb5.keytab"
+    - name: realm join --one-time-password=$(cat /etc/krb5.passwd) {{ domain }}
 
 ## User lookup
 auth_sssd:
