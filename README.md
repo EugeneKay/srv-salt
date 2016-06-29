@@ -11,7 +11,7 @@ This is a collection of [SaltStack](https://docs.saltstack.com/) States to manag
 License
 -------
 
-All files contained in this repository are Copyright © 2014 by [Eugene E. Kashpureff Jr](mailto:eugene@kashpureff.org), unless otherwise marked. License is granted under the WTFPL(version 2 or higher), and under the GNU GPL(version 3 or higher).
+All files contained in this repository are Copyright © 2014 by [Eugene E. Kashpureff Jr](mailto:eugene@kashpureff.org) and License granted under the WTFPL(version 2) as outlined in LICENSE.txt, unless otherwise marked.
 
 
 Compatibility
