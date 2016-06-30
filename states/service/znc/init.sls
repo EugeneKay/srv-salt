@@ -27,7 +27,7 @@ znc:
 znc-config:
   file.managed:
     - name: /srv/znc/configs/znc.conf
-    - source: salt://service/znc/files/znc.conf
+    - source: salt://service/znc/znc.conf
     - user: znc
     - group: znc
     - mode: 600

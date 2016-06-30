@@ -1,5 +1,5 @@
 {#
-# states/service/rtorrent/files/rtorrent.rc
+# states/service/rtorrent/rtorrent.rc
 # EugeneKay/srv-salt
 -#}
 #

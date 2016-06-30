@@ -1,5 +1,5 @@
 {#
-# states/system/env/files/env.sh
+# states/system/env/env.sh
 # EugeneKay/srv-salt
 -#}
 #

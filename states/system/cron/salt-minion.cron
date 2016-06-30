@@ -1,5 +1,5 @@
 {#
-# states/system/cron/files/salt-minion.cron
+# states/system/cron/salt-minion.cron
 # EugeneKay/srv-salt
 -#}
 # vim: ft=crontab

@@ -10,7 +10,7 @@ cron-jobs-salt-minion:
   file.managed:
     - name: /etc/cron.d/salt-minion
     - source:
-      - salt://system/cron/files/salt-minion.cron
+      - salt://system/cron/salt-minion.cron
     - mode: 644
     - user: root
     - group: root

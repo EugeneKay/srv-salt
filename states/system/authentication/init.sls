@@ -38,7 +38,7 @@ auth_realm:
 auth_sssd:
   file.managed:
     - name: /etc/sssd/sssd.conf
-    - source: salt://system/authentication/files/sssd.conf
+    - source: salt://system/authentication/sssd.conf
     - user: root
     - group: root
     - mode: 600
@@ -56,7 +56,7 @@ auth_sssd:
 auth_nsswitch:
   file.managed:
     - name: /etc/nsswitch.conf
-    - source: salt://system/authentication/files/nsswitch.conf
+    - source: salt://system/authentication/nsswitch.conf
     - user: root
     - group: root
     - mode: 644
@@ -66,7 +66,7 @@ auth_nsswitch:
 domain_krb5:
   file.managed:
     - name: /etc/krb5.conf
-    - source: salt://system/authentication/files/krb5.conf
+    - source: salt://system/authentication/krb5.conf
     - user: root
     - group: root
     - mode: 644

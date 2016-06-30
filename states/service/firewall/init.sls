@@ -13,7 +13,7 @@ iptables-services:
 iptables:
   file.managed:
     - name: /etc/sysconfig/iptables-config
-    - source: salt://service/firewall/files/iptables.config
+    - source: salt://service/firewall/iptables.config
     - user: root
     - group: root
     - mode: 600
@@ -24,7 +24,7 @@ iptables:
 ip6tables:
   file.managed:
     - name: /etc/sysconfig/ip6tables-config
-    - source: salt://service/firewall/files/ip6tables.config
+    - source: salt://service/firewall/ip6tables.config
     - user: root
     - group: root
     - mode: 600

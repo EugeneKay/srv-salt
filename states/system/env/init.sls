@@ -10,7 +10,7 @@
 env_hax:
   file.managed:
     - name: /etc/profile.d/0_env.sh
-    - source: salt://system/env/files/env.sh
+    - source: salt://system/env/env.sh
     - mode: 664
     - user: root
     - group: wheel

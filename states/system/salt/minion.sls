@@ -1,5 +1,5 @@
 {#
-# states/system/salt/files/minion.sls
+# states/system/salt/minion.sls
 # EugeneKay/srv-salt
 -#}
 # vim: ft=yaml

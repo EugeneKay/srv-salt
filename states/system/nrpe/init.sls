@@ -24,7 +24,7 @@ nrpe:
   file.managed:
     - name: /etc/nagios/nrpe.cfg
     - source:
-      - salt://system/nrpe/files/nrpe.cfg
+      - salt://system/nrpe/nrpe.cfg
     - mode: 644
     - user: root
     - group: root
@@ -61,7 +61,7 @@ nrpe-ip6tables:
 sudoers-nrpe:
   file.managed:
     - name: /etc/sudoers.d/nrpe
-    - source: salt://system/nrpe/files/sudoers.conf
+    - source: salt://system/nrpe/sudoers.conf
     - mode: 640
     - user: root
     - group: root
@@ -73,7 +73,7 @@ nagios-check-bandwidth:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_bandwidth
     - source:
-      - salt://system/nrpe/files/check_bandwidth.sh
+      - salt://system/nrpe/check_bandwidth.sh
     - mode: 755
     - user: root
     - group: root
@@ -82,7 +82,7 @@ nagios-check-folder:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_folder
     - source:
-      - salt://system/nrpe/files/check_folder.sh
+      - salt://system/nrpe/check_folder.sh
     - mode: 755
     - user: root
     - group: root
@@ -90,7 +90,7 @@ nagios-check-folder:
 nagios-check-io:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_io
-    - source: salt://system/nrpe/files/check_io.sh
+    - source: salt://system/nrpe/check_io.sh
     - mode: 755
     - user: root
     - group: root
@@ -99,7 +99,7 @@ nagios-check-mem:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_mem
     - source:
-      - salt://system/nrpe/files/check_mem.pl
+      - salt://system/nrpe/check_mem.pl
     - mode: 755
     - user: root
     - group: root
@@ -108,7 +108,7 @@ nagios-check-transfer:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_transfer
     - source:
-      - salt://system/nrpe/files/check_transfer.sh
+      - salt://system/nrpe/check_transfer.sh
     - mode: 755
     - user: root
     - group: root
@@ -117,7 +117,7 @@ nagios-check-transfer:
 nagios-check-volgroup:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_volgroup
-    - source: salt://system/nrpe/files/check_volgroup.sh
+    - source: salt://system/nrpe/check_volgroup.sh
     - mode: 755
     - user: root
     - group: root
@@ -126,7 +126,7 @@ nagios-check-volgroup:
 nagios-check-mdadm:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_mdadm
-    - source: salt://system/nrpe/files/check_mdadm.sh
+    - source: salt://system/nrpe/check_mdadm.sh
     - mode: 755
     - user: root
     - group: root
@@ -135,7 +135,7 @@ nagios-check-mdadm:
 nagios-check-temper:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_temper
-    - source: salt://system/nrpe/files/check_temper.sh
+    - source: salt://system/nrpe/check_temper.sh
     - mode: 755
     - user: root
     - group: root
@@ -144,7 +144,7 @@ nagios-check-temper:
 nagios-udev-thermometer:
   file.managed:
     - name: /etc/udev/rules.d/temper.rules
-    - source: salt://system/nrpe/files/temper.rules
+    - source: salt://system/nrpe/temper.rules
     - mode: 755
     - user: root
     - group: root
@@ -155,7 +155,7 @@ nagios-udev-thermometer:
 nagios-check-apcupsd:
   file.managed:
     - name: /usr/lib64/nagios/plugins/check_apcupsd
-    - source: salt://system/nrpe/files/check_apcupsd.sh
+    - source: salt://system/nrpe/check_apcupsd.sh
     - mode: 755
     - user: root
     - group: root

@@ -12,7 +12,7 @@ ntpd:
   file.managed:
     - name: /etc/ntp.conf
     - source:
-      - salt://system/ntp/files/ntp.conf
+      - salt://system/ntp/ntp.conf
     - mode: 664
     - user: root
     - group: wheel

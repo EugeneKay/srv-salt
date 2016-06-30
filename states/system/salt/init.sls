@@ -20,7 +20,7 @@ salt-minion:
   file.managed:
     - name: /etc/salt/minion
     - source:
-      - salt://system/salt/files/minion.sls
+      - salt://system/salt/minion.sls
     - mode: 664
     - user: root
     - group:  wheel

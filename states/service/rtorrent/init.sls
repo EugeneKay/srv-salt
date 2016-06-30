@@ -25,7 +25,7 @@ rtorrent-user:
 rtorrent-config:
   file.managed:
     - name: /etc/rtorrent.rc
-    - source: salt://service/rtorrent/files/rtorrent.rc
+    - source: salt://service/rtorrent/rtorrent.rc
     - user: rtorrent
     - group: rtorrent
     - mode: 640
@@ -43,7 +43,7 @@ rtorrent-rc:
 rtorrent-daemon:
   file.managed:
     - name: /usr/lib/systemd/system/rtorrent.service
-    - source: salt://service/rtorrent/files/rtorrent.service
+    - source: salt://service/rtorrent/rtorrent.service
     - user: root
     - group: root
     - mode: 644

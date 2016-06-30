@@ -23,7 +23,7 @@ salt-user:
 salt-config:
   file.managed:
     - name: /etc/salt/master
-    - source: salt://service/salt/files/master.sls
+    - source: salt://service/salt/master.sls
     - user: root
     - group: root
     - mode: 644

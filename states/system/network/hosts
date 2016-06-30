@@ -1,5 +1,5 @@
 {#
-# states/system/network/files/hosts
+# states/system/network/hosts
 # EugeneKay/srv-salt
 -#}
 #

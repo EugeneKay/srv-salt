@@ -20,7 +20,7 @@ sshd:
   file.managed:
     - name: /etc/ssh/sshd_config
     - source:
-      - salt://system/ssh/files/sshd_config.conf
+      - salt://system/ssh/sshd_config.conf
     - mode: 664
     - user: root
     - group: wheel

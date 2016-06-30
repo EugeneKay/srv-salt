@@ -1,5 +1,5 @@
 {#
-# states/system/nrpe/files/temper.rules
+# states/system/nrpe/temper.rules
 # EugeneKay/srv-salt
 -#}
 #

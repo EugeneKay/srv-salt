@@ -25,7 +25,7 @@ network-hostname:
 network-hosts:
   file.managed:
     - name: /etc/hosts
-    - source: salt://system/network/files/hosts
+    - source: salt://system/network/hosts
     - user: root
     - group: root
     - mode: 644
