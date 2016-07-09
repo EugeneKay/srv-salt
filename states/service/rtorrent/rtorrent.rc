@@ -15,8 +15,8 @@ session = ~/sessions/
 peer_exchange = no
 tracker_numwant = -1
 use_udp_trackers = yes
-port_range = {{port_range}}
-dht_port = {{dht_port}}
+port_range = {{port}}-{{port}}
+dht_port = {{port}}
 dht = auto
 bind = {{bind}}
 

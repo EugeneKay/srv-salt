@@ -5,7 +5,7 @@
 # rtorrent
 #
 
-## State date
+## State data
 {%  set roles = pillar['roles'] %}
 {%  set rtorrent = pillar['rtorrent'] %}
 
@@ -52,3 +52,39 @@ rtorrent-daemon:
     - enable: True
     - watch:
       - file: rtorrent-config
+
+## Firewall rules
+{%  if "firewall" in roles %}
+rtorrent-iptables-tcp:
+  iptables.append:
+    - family: ipv4
+    - table: filter
+    - chain: INPUT
+    - proto: tcp
+    - dport: {{rtorrent['port']}}
+    - jump: ACCEPT
+rtorrent-ip6tables-tcp:
+  iptables.append:
+    - family: ipv6
+    - table: filter
+    - chain: INPUT
+    - proto: tcp
+    - dport: {{rtorrent['port']}}
+    - jump: ACCEPT
+rtorrent-iptables-udp:
+  iptables.append:
+    - family: ipv4
+    - table: filter
+    - chain: INPUT
+    - proto: udp
+    - dport: {{rtorrent['port']}}
+    - jump: ACCEPT
+rtorrent-ip6tables-udp:
+  iptables.append:
+    - family: ipv6
+    - table: filter
+    - chain: INPUT
+    - proto: udp
+    - dport: {{rtorrent['port']}}
+    - jump: ACCEPT
+{%  endif %}
