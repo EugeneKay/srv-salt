@@ -20,10 +20,14 @@ dht_port = {{port}}
 dht = auto
 bind = {{bind}}
 
-min_peers = 2
-max_peers = 30
-min_peers_seed = 2
-max_peers_seed = 60
+min_peers = 5
+max_peers = 25
+min_peers_seed = 5
+max_peers_seed = 25
+
+max_downloads_global = 25
+max_uploads_global = 25
+max_uploads = 5
 
 download_rate = {{download_rate}}
 upload_rate = {{upload_rate}}
