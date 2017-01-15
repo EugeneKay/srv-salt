@@ -9,9 +9,10 @@
 libresonic-war:
   archive.extracted:
     - name: /var/lib/tomcat/webapps/libresonic/
-    - source: http://libresonic.org/release/libresonic-develop.war
+    - source: http://libresonic.org/release/libresonic-stable.war
     - source_hash: http://libresonic.org/release/SHA512SUMS.txt
     - archive_format: zip
+    - enforce_toplevel: false
     - user: tomcat
     - group: tomcat
     - require:

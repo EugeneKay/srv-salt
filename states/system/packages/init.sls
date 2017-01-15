@@ -5,7 +5,7 @@
 # System packages
 #
 
-packages:
-  cmd.run:
-    - name: yum update -y --skip-broken
-    - unless: yum check-update
+#packages:
+#  cmd.run:
+#    - name: yum update -y --skip-broken
+#    - unless: yum check-update

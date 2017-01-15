@@ -25,6 +25,7 @@ system:
     dcs:
       - tokitae
       - oliver
+      - yakima
     groups:
       - domain admins
     otp: Ch4ngeMe
