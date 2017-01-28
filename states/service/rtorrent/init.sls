@@ -52,6 +52,12 @@ rtorrent-daemon:
     - enable: True
     - watch:
       - file: rtorrent-config
+rtorrent-sessions:
+  file.directory:
+    - name: /srv/rtorrent/sessions/
+    - user: rtorrent
+    - group: rtorrent
+    - mode: 755
 
 ## Firewall rules
 {%  if "firewall" in roles %}

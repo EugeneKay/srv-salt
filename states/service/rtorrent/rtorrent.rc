@@ -18,7 +18,9 @@ use_udp_trackers = yes
 port_range = {{port}}-{{port}}
 dht_port = {{port}}
 dht = auto
+{%  if bind is defined -%}
 bind = {{bind}}
+{%  endif %}
 
 min_peers = 5
 max_peers = 25
