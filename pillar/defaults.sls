@@ -17,6 +17,7 @@ hardware:
 
 ## System Settings
 system:
+  banner: goatse
   master: salt.kashpureff.org
   authentication:
     method: domain

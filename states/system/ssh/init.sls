@@ -25,6 +25,15 @@ sshd:
     - user: root
     - group: wheel
     - template: jinja
+ssh-banner:
+  file.managed:
+    - name: /etc/ssh/sshd_banner.txt
+    - source:
+      - salt://system/ssh/banner_{{ pillar['system']['banner'] }}.txt
+      - salt://system/ssh/banner.txt
+    - mode: 644
+    - user: root
+    - group: wheel
 # Firewall rules
 {%  if "firewall" in roles %}
 ssh-iptables:
