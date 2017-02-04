@@ -1,0 +1,6 @@
+# vim: ft=crontab
+# /etc/cron.d/certot
+#
+# Min	Hour	Day	Month	Day	User	Command
+# 0-59	0-23	1-31	1-12	0-6	root	/bin/false
+37	3	*	*	*	root	/usr/bin/certbot renew --quiet --no-self-upgrade --agree-tos --post-hook "systemctl restart nginx"
