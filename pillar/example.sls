@@ -70,6 +70,14 @@ include:
   - pki.www-example-com
 
 
+## dnetc
+#
+# distributed.net client settings
+#
+## dnetc
+dnetc:
+  cores: 4
+
 ## rtorrent
 #
 # Settings for the rtorrent daemon.
