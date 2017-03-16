@@ -4,6 +4,7 @@
 #
 # Time server
 #
+{%  set roles = pillar['roles'] %}
 
 ## NTP Daemon
 ntpd:
@@ -21,3 +22,25 @@ ntpd:
         servers: ["0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org", "3.pool.ntp.org"]
   service.running:
     - enable: True
+
+## Firewall rules
+{%  if "firewall" in roles %}
+ntp-iptables:
+  iptables.append:
+    - family: ipv4
+    - table: filter
+    - chain: INPUT
+    - proto: udp
+    - dport: 123
+    - source: 173.230.156.35,198.19.0.1
+    - jump: ACCEPT
+ntp-ip6tables:
+  iptables.append:
+    - family: ipv6
+    - table: filter
+    - chain: INPUT
+    - proto: udp
+    - dport: 123
+    - source: 2600:3c01::14:7001,2600:3c01::14:70ff,2600:3c01:e001:2900::1
+    - jump: ACCEPT
+{%  endif %}
