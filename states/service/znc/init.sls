@@ -7,8 +7,6 @@
 
 ## State options
 {%  set roles = pillar['roles'] %}
-{%  set pki = pillar['certs'][pillar['znc']['cert']] %}
-
 
 ## Daemon
 znc:
@@ -21,7 +19,6 @@ znc:
     - enable: true
     - watch:
       - file: znc-config
-      - file: znc-pki
 
 # Configuration
 znc-config:
@@ -37,22 +34,6 @@ znc-config:
     - context:
         hostname: {{grains['fqdn']}}
 
-# PKI
-znc-pki:
-  file.managed:
-    - name: /etc/pki/znc/znc.pem
-    - makedirs: True
-    - user: root
-    - group: znc
-    - mode: 640
-    - source: salt://certs/stacked.pem
-    - template: jinja
-    - context:
-        key: {{pki['key']}}
-        cert: {{pki['cert']}}
-        chain: {{pki['chain']}}
-
-
 ## Data storage
 znc-data:
   file.directory:
@@ -60,7 +41,6 @@ znc-data:
     - user: znc
     - group: znc
     - mode: 775
-
 
 ## Firewall rules
 {%  if "firewall" in roles %}
