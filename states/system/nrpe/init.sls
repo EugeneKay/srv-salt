@@ -9,7 +9,7 @@
 
 
 ## Base Daemon
-nrpe:
+nrpe-packages:
   pkg.installed:
     - pkgs:
       - nrpe
@@ -18,9 +18,12 @@ nrpe:
       - nagios-plugins-disk
       - nagios-plugins-load
       - nagios-plugins-ping
+      - nagios-plugins-swap
       - nagios-plugins-users
       - nagios-plugins-uptime
       - nagios-plugins-check-updates
+
+nrpe-config:
   file.managed:
     - name: /etc/nagios/nrpe.cfg
     - source:
@@ -30,8 +33,13 @@ nrpe:
     - group: root
     - makedirs: True
     - template: jinja
+
+nrpe-service:
   service.running:
+    - name: nrpe
     - enable: True
+    - watch:
+      - nrpe-config
 
 
 ## Firewall rules
@@ -52,7 +60,7 @@ nrpe-ip6tables:
     - chain: INPUT
     - proto: tcp
     - dport: 5666
-    - source: 2600:3c01::14:7001,2600:3c01:e001:2900::1
+    - source: 2600:3c01::14:7001,2600:3c01::14:70ff,2600:3c01:e001:2900::1
     - jump: ACCEPT
 {%  endif %}
 
